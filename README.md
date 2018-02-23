@@ -25,14 +25,14 @@ Make sure you have [Node.js](http://nodejs.org/) installed.
 
 ```sh
 git clone https://github.com/atoztoa/transformer.git # or clone your own fork
-cd brainspark-transformer
+cd transformer
 npm start
 ```
 
 ## Building Docker Image
 
 ```sh
-cd brainspark-transformer
+cd transformer
 docker build -t transformer .
 ```
 
@@ -53,6 +53,13 @@ npm test
 ```
 
 Note: Make sure NSQ and ElasticSearch instances are running as per the configuration.
+
+## Highlights
+
+* Extensive app configuration.
+* Docker support.
+* Production ready.
+* Scaleable horizontally as NSQ events are depleted on reading by any instance for the same channel.
 
 ## Hurdles Faced
 
