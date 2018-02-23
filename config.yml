@@ -1,0 +1,66 @@
+# Configuration for Transformer
+
+# Server configuration
+server:
+  nsq:
+    host: localhost
+    port: 4150
+  nsqadmin:
+    host: localhost
+    port: 4151
+  elastic:
+    host: localhost
+    port: 9200
+  brainspark:
+    host: localhost
+    port: 8080
+
+# HTTP configuration
+http:
+  timeout: 10000
+
+# NSQ configuration
+nsq:
+  topic: events
+  channel: transformer
+
+# Message configuration
+msg:
+  keycount: 7
+  schema:
+    id: /Message
+    type: object
+    properties:
+      id:
+        type: string
+        required: true
+      attempt_id:
+        type: string
+        required: true
+      progress:
+        type: number
+        required: true
+      score:
+        type: number
+        required: true
+      timestamp:
+        type: string
+        format: date-time
+        required: true
+      type:
+        type: string
+        required: true
+      user_id:
+        type: string
+        required: true
+
+brainspark:
+  method:
+    attempt: Participation.GetAttempt
+    course: Content.GetCourse
+    trainee: Account.GetUser
+    user: Account.GetUser
+
+elastic:
+  type: event
+  indexprefix: events-

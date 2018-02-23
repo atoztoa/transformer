@@ -1,0 +1,27 @@
+{
+  "name": "brainspark-transformer",
+  "version": "0.0.1",
+  "description": "Transformer for Brainspark Events",
+  "author": "Abheesh Suresh Babu <abheeshs@gmail.com>",
+  "private": "true",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "prestart": "npm install",
+    "lint": "eslint .",
+    "test": "NODE_ENV=test node app.js"
+  },
+  "dependencies": {
+    "uuid": "*",
+    "request": "*",
+    "yamljs": "*",
+    "jsonschema": "*",
+    "nsqjs": "*",
+    "elasticsearch": "*",
+    "tape": "*"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0"
+  }
+}
