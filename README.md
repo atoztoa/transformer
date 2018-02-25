@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-The only prerequisites for using this repository are [Docker](https://www.docker.com/what-container) & [Node.js](https://nodejs.org/en/). 
+The only prerequisites for using this repository are [Docker](https://www.docker.com/what-container) & [Node.js](https://nodejs.org/en/).
 
 Installation links:
 
@@ -48,7 +48,7 @@ Note: Make sure NSQ and ElasticSearch instances are running as per the configura
 
 The unit tests can be run by the command
 
-```s
+```sh
 npm test
 ```
 
@@ -69,10 +69,15 @@ Note: Make sure NSQ and ElasticSearch instances are running as per the configura
 ## Things To Do
 
 * If transformer is started after NSQ has run for a while, it will start bombarding ElasticSearch which will reject the messages more than the queue size.
+```sh
+status: 429,
+displayName: 'TooManyRequests',
+message: '[es_rejected_execution_exception] rejected execution of org.elasticsearch.transport.TransportService$7@53f0ecd9 on EsThreadPoolExecutor[bulk, queue capacity = 200, org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor@727c4094[Running, pool size = 4, active threads = 4, queued tasks = 200, completed tasks = 2011]]',
+```
 
 ## Authors
 
-* **Abheesh Suresh Babu** 
+* **Abheesh Suresh Babu**
 
 ## Acknowledgments
 

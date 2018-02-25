@@ -313,28 +313,6 @@ if (process.env.NODE_ENV !== 'test') {
   startReader();
 }
 
-/*
-
-## Requirements
-- your code should include a `README.md` file in the root with instructions for building, running, and testing. It can also include notes on your throught process and any issues you may have run into.
-
-## Evaluation
-We will evaluate your submission using the following criteria
-- Is your application well organized?
-- Is your code documented?
-- Is your code efficient & performant?
-
-## Submission
-Please upload this repository to Github and submit to @jgiless when complete. Also, we would love your feedback, so feel free to share your thoughts on the exercise!
-
-status: 429,
-  displayName: 'TooManyRequests',
-    message: '[es_rejected_execution_exception] rejected execution of org.elasticsearch.transport.TransportService$7@53f0ecd9 on EsThreadPoolExecutor[bulk, queue capacity = 200, org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor@727c4094[Running, pool size = 4, active threads = 4, queued tasks = 200, completed tasks = 2011]]',
-
-
-*/
-
-
 //
 //
 // --------------------------------- THIS SECTION SHOULD BE IN A SEPARATE TEST FILE --------- LAZY -----
